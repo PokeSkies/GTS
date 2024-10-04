@@ -15,6 +15,7 @@ import org.pokesplash.gts.UI.button.Filler;
 import org.pokesplash.gts.UI.module.ListingInfo;
 import org.pokesplash.gts.UI.module.PokemonInfo;
 import org.pokesplash.gts.api.GtsAPI;
+import org.pokesplash.gts.enumeration.Sort;
 import org.pokesplash.gts.util.Utils;
 
 import java.util.Collection;
@@ -29,6 +30,7 @@ public class SinglePokemonListing {
 	 * @return SinglePokemonListing page.
 	 */
 	public Page getPage(ServerPlayer viewer, PokemonListing listing) {
+		System.out.println("Single Pokemon Listing");
 
 
 
@@ -88,7 +90,7 @@ public class SinglePokemonListing {
 				.title(Gts.language.getCancelPurchaseButtonLabel())
 				.onClick((action) -> {
 					ServerPlayer sender = action.getPlayer();
-					Page page = new AllListings().getPage();
+					Page page = new AllListings().getPage(FilterType.ALL, Sort.DATE, null);
 					UIManager.openUIForcefully(sender, page);
 				})
 				.build();

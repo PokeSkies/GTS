@@ -93,6 +93,14 @@ public class Lang extends Versioned {
 	private Material sortByNameButtonItem; // The material for the sort by name button.
 	private Material relistExpiredButtonItem; // The material for the relist button.
 
+	// custom
+	private Material filterButtonItem; // The material for the filter button.
+	private String filterButtonLabel; // The label of the button that filters.
+	private Material sortButtonItem; // The material for the sort button.
+	private String sortButtonLabel; // The label of the button that sorts.
+	private Material allListingsButtonItem; // The material for the all listings button.
+	private String allListingsButtonLabel; // The label of the button that shows all listings.
+
 	/**
 	 * Placeholders
 	 */
@@ -173,6 +181,14 @@ public class Lang extends Versioned {
 		sortByNameButtonLabel = "§6Sort By Name";
 		receiveListingButtonLabel = "§2Receive Listing";
 		insufficientInventorySpace = "§cYou do not have enough inventory space to receive this listing.";
+
+		// custom
+		filterButtonItem = new Material("minecraft:hopper", "");
+		filterButtonLabel = "§6Filter";
+		sortButtonItem = new Material("minecraft:bell", "");
+		sortButtonLabel = "§cSort";
+		allListingsButtonItem = new Material("cobblemon:relic_coin_pouch", "");
+		allListingsButtonLabel = "§dAll Listings";
 	}
 
 	/**
@@ -365,6 +381,14 @@ public class Lang extends Versioned {
 	public String getPokemonListingsTitle() {
 		return pokemonListingsTitle;
 	}
+
+	// custom
+	public Material getFilterButtonItem() { return filterButtonItem; }
+	public String getFilterButtonLabel() { return filterButtonLabel; }
+	public Material getSortButtonItem() { return sortButtonItem; }
+	public String getSortButtonLabel() { return sortButtonLabel; }
+	public Material getAllListingsButtonItem() { return allListingsButtonItem; }
+	public String getAllListingsButtonLabel() { return allListingsButtonLabel; }
 
 	/**
 	 * Method to initialize the config.

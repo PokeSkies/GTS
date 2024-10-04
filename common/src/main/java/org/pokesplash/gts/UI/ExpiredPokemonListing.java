@@ -29,6 +29,7 @@ public class ExpiredPokemonListing {
 	 * @return SinglePokemonListing page.
 	 */
 	public Page getPage(PokemonListing listing) {
+		System.out.println("Expired Pokemon Listings");
 
 		Collection<Component> lore = new ArrayList<>();
 

@@ -9,7 +9,10 @@ import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.Commands;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerPlayer;
+import org.pokesplash.gts.UI.AllListings;
+import org.pokesplash.gts.UI.FilterType;
 import org.pokesplash.gts.UI.FilteredListings;
+import org.pokesplash.gts.enumeration.Sort;
 import org.pokesplash.gts.util.Subcommand;
 
 public class Search extends Subcommand {
@@ -50,7 +53,7 @@ public class Search extends Subcommand {
 		String argument = StringArgumentType.getString(context, "value");
 
 		try {
-			Page page = new FilteredListings().getPage(argument);
+			Page page = new AllListings().getPage(FilterType.ALL, Sort.NONE, argument);
 
 			UIManager.openUIForcefully(sender, page);
 

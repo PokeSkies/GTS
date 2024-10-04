@@ -8,7 +8,9 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerPlayer;
 import org.pokesplash.gts.Gts;
 import org.pokesplash.gts.UI.AllListings;
+import org.pokesplash.gts.UI.FilterType;
 import org.pokesplash.gts.command.subcommand.*;
+import org.pokesplash.gts.enumeration.Sort;
 import org.pokesplash.gts.util.BaseCommand;
 
 import java.util.Arrays;
@@ -38,7 +40,7 @@ public class GtsCommand extends BaseCommand {
 		ServerPlayer sender = context.getSource().getPlayer();
 
 		try {
-			Page page = new AllListings().getPage();
+			Page page = new AllListings().getPage(FilterType.ALL, Sort.NONE, null);
 
 			UIManager.openUIForcefully(sender, page);
 		} catch (Exception e) {

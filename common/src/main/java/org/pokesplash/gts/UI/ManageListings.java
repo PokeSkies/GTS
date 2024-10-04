@@ -36,6 +36,7 @@ public class ManageListings {
 	 * @return Pokemon Listings page.
 	 */
 	public Page getPage(UUID owner) {
+		System.out.println("Manage Listings");
 
 		List<PokemonListing> pkmListings = Gts.listings.getPokemonListingsByPlayer(owner);
 		List<ItemListing> itmListings = Gts.listings.getItemListingsByPlayer(owner);
@@ -86,12 +87,10 @@ public class ManageListings {
 		ChestTemplate template = ChestTemplate.builder(6)
 				.rectangle(0, 0, 5, 9, placeholder)
 				.fill(Filler.getButton())
-				.set(48, SeePokemonListings.getButton())
-				.set(49, ExpiredListings.getButton())
-				.set(50, SeeItemListings.getButton())
 				.set(53, NextPage.getButton())
 				.set(45, PreviousPage.getButton())
 				.set(52, RelistAll.getButton())
+				.set(49, SeeAllListings.getButton())
 				.build();
 
 		pokemonButtons.addAll(itemButtons);
