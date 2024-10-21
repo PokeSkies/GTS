@@ -29,8 +29,6 @@ public class SingleItemListing {
 	 * @return SinglePokemonListing page.
 	 */
 	public Page getPage(ServerPlayer viewer, ItemListing listing) {
-		System.out.println("Single Item Listing");
-
 		Collection<Component> lore = ListingInfo.parse(listing);
 
 		Button pokemon = GooeyButton.builder()

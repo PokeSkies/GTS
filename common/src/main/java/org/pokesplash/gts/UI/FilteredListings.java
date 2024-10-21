@@ -37,9 +37,6 @@ public class FilteredListings {
 	 * @return Pokemon Listings page.
 	 */
 	public Page getPage(String searchValue) {
-		System.out.println("Filtered Listings");
-
-
 		PlaceholderButton placeholder = new PlaceholderButton();
 
 		List<Button> buttons = new ArrayList<>();

@@ -30,10 +30,6 @@ public class SinglePokemonListing {
 	 * @return SinglePokemonListing page.
 	 */
 	public Page getPage(ServerPlayer viewer, PokemonListing listing) {
-		System.out.println("Single Pokemon Listing");
-
-
-
 		Collection<Component> lore = ListingInfo.parse(listing);
 
 		lore.addAll(PokemonInfo.parse(listing));

@@ -41,8 +41,6 @@ public class AllListings {
 	 * @return Pokemon Listings page.
 	 */
 	public Page getPage(FilterType filter, Sort sort, @Nullable String searchValue) {
-		System.out.println("All Listings");
-
 		PlaceholderButton placeholder = new PlaceholderButton();
 
 		List<Button> buttons = new ArrayList<>();

@@ -33,8 +33,6 @@ public class History {
 	 * @return Pokemon Listings page.
 	 */
 	public Page getPage(UUID owner) {
-		System.out.println("History");
-
 		PlaceholderButton placeholder = new PlaceholderButton();
 
 		PlayerHistory playerHistory = Gts.history.getPlayerHistory(owner);

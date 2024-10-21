@@ -36,8 +36,6 @@ public class ManageListings {
 	 * @return Pokemon Listings page.
 	 */
 	public Page getPage(UUID owner) {
-		System.out.println("Manage Listings");
-
 		List<PokemonListing> pkmListings = Gts.listings.getPokemonListingsByPlayer(owner);
 		List<ItemListing> itmListings = Gts.listings.getItemListingsByPlayer(owner);
 

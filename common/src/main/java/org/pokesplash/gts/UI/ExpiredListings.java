@@ -36,8 +36,6 @@ public class ExpiredListings {
 	 * @return Pokemon Listings page.
 	 */
 	public Page getPage(UUID owner) {
-		System.out.println("Expired Listings");
-
 		PlaceholderButton placeholder = new PlaceholderButton();
 
 		List<Listing> listings = Gts.listings.getExpiredListingsOfPlayer(owner);
