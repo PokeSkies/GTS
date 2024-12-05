@@ -32,7 +32,6 @@ public class ExpiredItemListing {
 	 * @return SinglePokemonListing page.
 	 */
 	public Page getPage(ItemListing listing) {
-
 		List<Component> lore = new ArrayList<>();
 
 		lore.add(Component.literal(Gts.language.getSeller() + listing.getSellerName()));

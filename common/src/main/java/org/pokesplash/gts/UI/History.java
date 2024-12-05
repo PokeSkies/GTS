@@ -36,7 +36,6 @@ public class History {
 	 * @return Pokemon Listings page.
 	 */
 	public Page getPage(UUID owner) {
-
 		PlaceholderButton placeholder = new PlaceholderButton();
 
 		PlayerHistory playerHistory = Gts.history.getPlayerHistory(owner);
@@ -99,11 +98,9 @@ public class History {
 		ChestTemplate template = ChestTemplate.builder(6)
 				.rectangle(0, 0, 5, 9, placeholder)
 				.fill(Filler.getButton())
-				.set(48, SeePokemonListings.getButton())
-				.set(49, ManageListings.getButton())
-				.set(50, SeeItemListings.getButton())
 				.set(53, NextPage.getButton())
 				.set(45, PreviousPage.getButton())
+				.set(49, SeeAllListings.getButton())
 				.build();
 
 		LinkedPage page = PaginationHelper.createPagesFromPlaceholders(template, buttons, null);

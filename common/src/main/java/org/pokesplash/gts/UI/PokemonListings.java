@@ -37,7 +37,6 @@ public class PokemonListings {
 	 * @return Pokemon Listings page.
 	 */
 	public Page getPage(Sort sort) {
-
 		List<PokemonListing> pkmListings = Gts.listings.getPokemonListings();
 
 		if (sort.equals(Sort.PRICE)) {

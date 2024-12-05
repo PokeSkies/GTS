@@ -17,6 +17,7 @@ import org.pokesplash.gts.Listing.ItemListing;
 import org.pokesplash.gts.UI.button.Filler;
 import org.pokesplash.gts.UI.module.ListingInfo;
 import org.pokesplash.gts.api.GtsAPI;
+import org.pokesplash.gts.enumeration.Sort;
 import org.pokesplash.gts.util.Utils;
 
 import java.util.Collection;
@@ -32,7 +33,6 @@ public class SingleItemListing {
 	 * @return SinglePokemonListing page.
 	 */
 	public Page getPage(ServerPlayer viewer, ItemListing listing) {
-
 		List<Component> lore = ListingInfo.parse(listing);
 
 		Button pokemon = GooeyButton.builder()
@@ -91,7 +91,7 @@ public class SingleItemListing {
 						Component.literal(Gts.language.getCancelPurchaseButtonLabel()))
 				.onClick((action) -> {
 					ServerPlayer sender = action.getPlayer();
-					Page page = new AllListings().getPage();
+					Page page = new AllListings().getPage(FilterType.ALL, Sort.DATE, null);
 					UIManager.openUIForcefully(sender, page);
 				})
 				.build();

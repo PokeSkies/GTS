@@ -39,7 +39,6 @@ public class ExpiredListings {
 	 * @return Pokemon Listings page.
 	 */
 	public Page getPage(UUID owner) {
-
 		PlaceholderButton placeholder = new PlaceholderButton();
 
 		List<Listing> listings = Gts.listings.getExpiredListingsOfPlayer(owner);
@@ -95,11 +94,9 @@ public class ExpiredListings {
 		ChestTemplate template = ChestTemplate.builder(6)
 				.rectangle(0, 0, 5, 9, placeholder)
 				.fill(Filler.getButton())
-				.set(48, SeePokemonListings.getButton())
-				.set(49, ManageListings.getButton())
-				.set(50, SeeItemListings.getButton())
 				.set(53, NextPage.getButton())
 				.set(45, PreviousPage.getButton())
+				.set(49, SeeAllListings.getButton())
 				.set(52, RelistAll.getButton())
 				.build();
 

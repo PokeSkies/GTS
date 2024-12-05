@@ -40,8 +40,6 @@ public class FilteredListings {
 	 * @return Pokemon Listings page.
 	 */
 	public Page getPage(String searchValue) {
-
-
 		PlaceholderButton placeholder = new PlaceholderButton();
 
 		List<Button> buttons = new ArrayList<>();
